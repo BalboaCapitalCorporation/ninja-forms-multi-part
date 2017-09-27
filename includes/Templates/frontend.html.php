@@ -1,7 +1,7 @@
 <script id="tmpl-nf-mp-form-content" type="text/template">
 	<div class="nf-mp-header"></div>
 	<div class="nf-mp-body"></div>
-	<div class="nf-mp-footer"></div>
+	<div class="nf-mp-footer boxed"></div>
 </script>
 
 <?php 
@@ -30,19 +30,15 @@ if ( ! version_compare( get_option( 'ninja_forms_version', '0' ), '3.0', '>' ) )
 </script>
 
 <script id="tmpl-nf-mp-next-previous" type="text/template">
-	<ul class="nf-next-previous">
+	<div class="text-center">
 		<# if ( data.showPrevious ) { #>
-		<li class="nf-previous-item">
-			<input type="button" class="nf-previous" value="{{{ data.prevLabel }}}" />
-		</li>
+			<a class="nf-previous center-block text-center">{{{ data.prevLabel }}}</a>
 		<# } #>
 
 		<# if ( data.showNext ) { #>
-		<li class="nf-next-item">
-			<input type="button" class="nf-next" value="{{{ data.nextLabel }}}" />
-		</li>
+			<input type="button" class="nf-next btn btn--primary type--uppercase" value="{{{ data.nextLabel }}}" />
 		<# } #>
-	</ul>
+	</div>
 </script>
 
 <script id="tmpl-nf-mp-breadcrumbs" type="text/template">
