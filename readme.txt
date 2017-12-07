@@ -4,7 +4,7 @@ Donate link: http://wpninjas.com
 Tags: form, forms
 Requires at least: 4.6
 Tested up to: 4.8
-Stable tag: 3.0.21
+Stable tag: 3.0.22
 
 License: GPLv2 or later
 
@@ -25,6 +25,18 @@ This section describes how to install the plugin and get it working.
 For help and video tutorials, please visit our website: [Ninja Forms Documentation](http://wpninjas.com/ninja-forms/docs/)
 
 == Changelog ==
+
+= 3.0.22 (7 November 2017) =
+
+*Bugs:*
+
+* When a part is deleted all fields associated with that part are now removed.
+* Part order will now be consistent in form imports and exports.
+* Google reCaptcha will now render on any form part.
+
+*Changes:*
+
+* Updated the opinionated styles for the progress bar.
 
 = 3.0.21 (15 September 2017) =
 

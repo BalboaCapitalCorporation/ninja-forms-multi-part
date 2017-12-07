@@ -80,12 +80,10 @@ DEFAULT LIGHT COLORS
 .nf-breadcrumbs li a {
   background: #333;
   color: #f7f7f7;
-  -webkit-transition: all .5s;
   transition: all .5s; }
   .nf-breadcrumbs li a:hover {
     background: #c4c4c4;
     color: #787878;
-    -webkit-transition: all .5s;
     transition: all .5s; }
 
 .nf-breadcrumbs li.active a {
@@ -98,8 +96,11 @@ DEFAULT LIGHT COLORS
   color: #fff;
   cursor: help; }
 
-.nf-progress {
+.nf-progress-container {
   background-color: #f7f7f7; }
+
+.nf-progress {
+  background-color: #dedede; }
 
 /* ---------------------------------
 LIGHT COLORS - nf-brown
@@ -107,12 +108,10 @@ LIGHT COLORS - nf-brown
 .nf-brown .nf-breadcrumbs li a {
   background: #736628;
   color: #F3EFDD;
-  -webkit-transition: all .5s;
   transition: all .5s; }
   .nf-brown .nf-breadcrumbs li a:hover {
     background: #d8cc92;
     color: #9a8837;
-    -webkit-transition: all .5s;
     transition: all .5s; }
 
 .nf-brown .nf-breadcrumbs li.active a {
@@ -125,8 +124,11 @@ LIGHT COLORS - nf-brown
   color: #fff;
   cursor: help; }
 
-.nf-brown .nf-progress {
+.nf-brown .nf-progress-container {
   background-color: #F3EFDD; }
+
+.nf-brown .nf-progress {
+  background-color: #e6ddb7; }
 
 /* ---------------------------------
 LIGHT COLORS - nf-red
@@ -134,12 +136,10 @@ LIGHT COLORS - nf-red
 .nf-red .nf-breadcrumbs li a {
   background: #8A5252;
   color: #F0E3E3;
-  -webkit-transition: all .5s;
   transition: all .5s; }
   .nf-red .nf-breadcrumbs li a:hover {
     background: #cca1a1;
     color: #8a4a4a;
-    -webkit-transition: all .5s;
     transition: all .5s; }
 
 .nf-red .nf-breadcrumbs li.active a {
@@ -152,8 +152,11 @@ LIGHT COLORS - nf-red
   color: #fff;
   cursor: help; }
 
-.nf-red .nf-progress {
+.nf-red .nf-progress-container {
   background-color: #F0E3E3; }
+
+.nf-red .nf-progress {
+  background-color: #dec2c2; }
 
 /* ---------------------------------
 LIGHT COLORS - nf-blue
@@ -161,12 +164,10 @@ LIGHT COLORS - nf-blue
 .nf-blue .nf-breadcrumbs li a {
   background: #4F9DBF;
   color: #DFEFF5;
-  -webkit-transition: all .5s;
   transition: all .5s; }
   .nf-blue .nf-breadcrumbs li a:hover {
     background: #91c8dd;
     color: #3384a2;
-    -webkit-transition: all .5s;
     transition: all .5s; }
 
 .nf-blue .nf-breadcrumbs li.active a {
@@ -179,7 +180,10 @@ LIGHT COLORS - nf-blue
   color: #fff;
   cursor: help; }
 
-.nf-blue .nf-progress {
+.nf-blue .nf-progress-container {
   background-color: #DFEFF5; }
+
+.nf-blue .nf-progress {
+  background-color: #b8dce9; }
 
 /*# sourceMappingURL=display-opinions-light.css.map */

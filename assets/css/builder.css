@@ -10,7 +10,6 @@
   left: 0;
   right: 0;
   z-index: 100;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease; }
   #nf-mp-drawer ul.ui-sortable {
     float: left;
@@ -66,7 +65,6 @@
 
 .nf-has-parts #nf-mp-drawer {
   bottom: 0;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease; }
 
 .nf-has-parts .nf-master-control {

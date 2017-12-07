@@ -80,12 +80,10 @@ DEFAULT DARK COLORS
 .nf-breadcrumbs li a {
   background: #fff;
   color: #222;
-  -webkit-transition: all .5s;
   transition: all .5s; }
   .nf-breadcrumbs li a:hover {
     background: #3c3c3c;
     color: #888888;
-    -webkit-transition: all .5s;
     transition: all .5s; }
 
 .nf-breadcrumbs li.active a {
@@ -98,6 +96,9 @@ DEFAULT DARK COLORS
   color: #fff;
   cursor: help; }
 
+.nf-progress-container {
+  background-color: #3c3c3c; }
+
 .nf-progress {
   background-color: #222; }
 
@@ -107,12 +108,10 @@ DARK COLORS - nf-brown
 .nf-brown .nf-breadcrumbs li a {
   background: #ea981b;
   color: #3e2b13;
-  -webkit-transition: all .5s;
   transition: all .5s; }
   .nf-brown .nf-breadcrumbs li a:hover {
     background: #65461f;
     color: #ca9553;
-    -webkit-transition: all .5s;
     transition: all .5s; }
 
 .nf-brown .nf-breadcrumbs li.active a {
@@ -125,6 +124,9 @@ DARK COLORS - nf-brown
   color: #fff;
   cursor: help; }
 
+.nf-brown .nf-progress-container {
+  background-color: #65461f; }
+
 .nf-brown .nf-progress {
   background-color: #3e2b13; }
 
@@ -134,12 +136,10 @@ DARK COLORS - nf-red
 .nf-red .nf-breadcrumbs li a {
   background: red;
   color: #350000;
-  -webkit-transition: all .5s;
   transition: all .5s; }
   .nf-red .nf-breadcrumbs li a:hover {
     background: #680000;
     color: #ff0202;
-    -webkit-transition: all .5s;
     transition: all .5s; }
 
 .nf-red .nf-breadcrumbs li.active a {
@@ -152,6 +152,9 @@ DARK COLORS - nf-red
   color: #fff;
   cursor: help; }
 
+.nf-red .nf-progress-container {
+  background-color: #680000; }
+
 .nf-red .nf-progress {
   background-color: #350000; }
 
@@ -161,12 +164,10 @@ DARK COLORS - nf-blue
 .nf-blue .nf-breadcrumbs li a {
   background: #00AEFF;
   color: #001C33;
-  -webkit-transition: all .5s;
   transition: all .5s; }
   .nf-blue .nf-breadcrumbs li a:hover {
     background: #003866;
     color: #008cff;
-    -webkit-transition: all .5s;
     transition: all .5s; }
 
 .nf-blue .nf-breadcrumbs li.active a {
@@ -178,6 +179,9 @@ DARK COLORS - nf-blue
   background: red;
   color: #fff;
   cursor: help; }
+
+.nf-blue .nf-progress-container {
+  background-color: #003866; }
 
 .nf-blue .nf-progress {
   background-color: #001C33; }

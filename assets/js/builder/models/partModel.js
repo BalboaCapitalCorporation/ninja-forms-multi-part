@@ -35,6 +35,8 @@ define( [], function() {
 			if ( ! this.get( 'key' ) ) {
 				this.set( 'key', Math.random().toString( 36 ).replace( /[^a-z]+/g, '' ).substr( 0, 8 ) );
 			}
+            // Cast order as a number to avoid string comparison.
+            this.set( 'order', Number( this.get( 'order' ) ) );
 		},
 
 		unclean: function() {

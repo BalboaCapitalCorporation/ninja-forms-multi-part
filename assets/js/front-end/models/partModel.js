@@ -13,6 +13,8 @@ define( [], function() {
 			this.listenTo( this.get( 'formContentData' ), 'change:errors', this.maybeChangeActivePart );
 			this.fieldErrors[ this.cid ] = [];
 			this.on( 'change:visible', this.changeVisible, this );
+            // Cast order as a number to avoid string comparison.
+            this.set( 'order', Number( this.get( 'order' ) ) );
 		},
 
 		filterFormContentData: function() {

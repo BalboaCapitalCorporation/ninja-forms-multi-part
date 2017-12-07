@@ -91,6 +91,15 @@ define(	[],	function () {
 			var data = {
 				collection: partModel.collection
 			};
+            
+            /**
+             * Collect the field models on our part and trash them.
+             */
+            this.trash = [];
+            this.removeFields(partModel.get('formContentData').models, this);
+            this.trash.forEach( function( model ) {
+                model.collection.remove( model );
+            } );
 
 			var newChange = nfRadio.channel( 'changes' ).request( 'register:change', 'removePart', partModel, null, label, data );
 			/*
@@ -98,6 +107,20 @@ define(	[],	function () {
 			 */
 			partModel.collection.remove( partModel );
 		},
+        
+        removeFields: function( collection, that ) {
+            _.each( collection, function( model ) {
+                if ( 'undefined' != typeof model ) {
+                    if ( 'undefined' != typeof model.get( 'fields' ) ) {
+                        that.removeFields( model.get( 'fields' ).models, that );
+                    } else if ( 'undefined' != typeof model.get( 'cells' ) ) {
+                        that.removeFields( model.get( 'cells' ).models, that );
+                    } else if ( 'undefined' != model.get( 'id' ) ) {
+                        that.trash.push( model );
+                    }
+                }
+            });
+        },
 
 		clickDuplicate: function( e, settingModel, partModel, settingView ) {
 			var partClone = nfRadio.channel( 'app' ).request( 'clone:modelDeep', partModel );

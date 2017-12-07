@@ -27,6 +27,10 @@
     }
 }
 
+.nf-progress-container {
+    background-color: $progress-background;
+}
+
 .nf-progress {
-    background-color: $field-background;
+    background-color: $progress-bar;
 }
