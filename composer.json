@@ -1,3 +1,4 @@
 {
-  "name": "wpninjas/ninja-forms-multi-part"
+  "name": "wpninjas/ninja-forms-multi-part",
+    "type": "wordpress-plugin",  
 }
