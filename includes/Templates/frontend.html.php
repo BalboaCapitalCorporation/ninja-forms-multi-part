@@ -31,13 +31,18 @@ if ( ! version_compare( get_option( 'ninja_forms_version', '0' ), '3.0', '>' ) )
 
 <script id="tmpl-nf-mp-next-previous" type="text/template">
 	<div class="text-center">
+		<# if ( data.showNext ) { #>
+			<input type="button" class="nf-next btn btn--primary type--uppercase" value="{{{ data.nextLabel }}}" />
+		<# } #>
+                
+                <# if ( data.showNext && data.showPrevious) { #>
+                <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+                <# } #>
+                
 		<# if ( data.showPrevious ) { #>
 			<a class="nf-previous center-block text-center">{{{ data.prevLabel }}}</a>
 		<# } #>
 
-		<# if ( data.showNext ) { #>
-			<input type="button" class="nf-next btn btn--primary type--uppercase" value="{{{ data.nextLabel }}}" />
-		<# } #>
 	</div>
 </script>
 
