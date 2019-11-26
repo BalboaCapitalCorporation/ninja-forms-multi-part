@@ -16,9 +16,10 @@ define( [ 'models/partModel' ], function( PartModel ) {
 			}
 			return this.currentElement;
 		},
-		  
+
 		setElement: function( model, silent ) {
 			silent = silent || false;
+
 			/*
 			 * If we have part errors and aren't updating silently, check for part errors.
 			 */
@@ -32,13 +33,42 @@ define( [ 'models/partModel' ], function( PartModel ) {
 				nfRadio.channel( 'nfMP' ).trigger( 'change:part', this );
 			} 
 		},
+		  
+		// check for errors on Next click if we have validate parts on
+		setNextElement: function( model, silent ) {
+			silent = silent || false;
+
+			/*
+			 * If we have part errors and aren't updating silently, check for part errors.
+			 */
+			if ( ! silent ) {
+				if ( this.partErrors() ) return;
+			}
+			
+			this.currentElement = model;
+			if ( ! silent ) {
+				this.trigger( 'change:part', this );
+				nfRadio.channel( 'nfMP' ).trigger( 'change:part', this );
+			} 
+		},
+
+		// We don't want to stop user from moving back in the form if there are errors
+		setPreviousElement: function( model, silent ) {
+			silent = silent || false;
+			
+			this.currentElement = model;
+			if ( ! silent ) {
+				this.trigger( 'change:part', this );
+				nfRadio.channel( 'nfMP' ).trigger( 'change:part', this );
+			}
+		},
 		
 		next: function (){
 			/*
 			 * If this isn't the last visible part, move forward.
 			 */
 			if ( this.getVisibleParts().length - 1 != this.getVisibleParts().indexOf( this.getElement() ) ) {
-				this.setElement( this.getVisibleParts()[ this.getVisibleParts().indexOf( this.getElement() ) + 1 ] );
+				this.setNextElement( this.getVisibleParts()[ this.getVisibleParts().indexOf( this.getElement() ) + 1 ] );
 			}
 			
 			return this;
@@ -49,7 +79,7 @@ define( [ 'models/partModel' ], function( PartModel ) {
 			 * If this isn't the first visible part, move backward.
 			 */
 			if ( 0 != this.getVisibleParts().indexOf( this.getElement() ) ) {
-				this.setElement( this.getVisibleParts()[ this.getVisibleParts().indexOf( this.getElement() ) - 1 ] );	
+				this.setPreviousElement( this.getVisibleParts()[ this.getVisibleParts().indexOf( this.getElement() ) - 1 ] );	
 			}
 			
 			return this;

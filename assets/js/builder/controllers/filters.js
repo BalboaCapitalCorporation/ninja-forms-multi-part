@@ -45,7 +45,7 @@ define(
 			/*
 			 * Listen to changes on our "then" statement.
 			 */
-			this.listenTo( nfRadio.channel( 'conditions' ), 'change:then', this.maybeAddElse );
+			// this.listenTo( nfRadio.channel( 'conditions' ), 'change:then', this.maybeAddElse );
 
 			this.emptyView();
 		},

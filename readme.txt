@@ -2,9 +2,9 @@
 Contributors: kstover, jameslaws
 Donate link: http://wpninjas.com
 Tags: form, forms
-Requires at least: 4.6
-Tested up to: 4.8
-Stable tag: 3.0.22
+Requires at least: 4.7
+Tested up to: 4.9
+Stable tag: 3.0.26
 
 License: GPLv2 or later
 
@@ -25,6 +25,30 @@ This section describes how to install the plugin and get it working.
 For help and video tutorials, please visit our website: [Ninja Forms Documentation](http://wpninjas.com/ninja-forms/docs/)
 
 == Changelog ==
+
+= 3.0.26 (2 April 2019) =
+
+*Bugs:*
+
+* Resolved an issue that was sometimes causing an undefined index notice on activation.
+
+= 3.0.25 (23 January 2019) =
+
+*Changes:*
+
+* Showing or hiding a part with conditional logic will no longer automatically add a reverse statement.
+
+= 3.0.24 (24 August 2018) =
+
+*Bugs:*
+
+* Required field validation should no longer prevent navigation to the previous part.
+
+= 3.0.23 (23 May 2018) =
+
+*Bugs:*
+
+* Part duplication should no longer be available in situations where it can cause data corruption.
 
 = 3.0.22 (7 November 2017) =
 
